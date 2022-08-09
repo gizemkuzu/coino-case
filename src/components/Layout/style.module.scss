@@ -1,0 +1,26 @@
+.layouts {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    .sidebar {
+        padding: 50px 25px;
+        @media (max-width: 768px) {
+            padding: 10px;
+        }
+    }
+
+    .content {
+        @extend .sidebar;
+        width: 75%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
